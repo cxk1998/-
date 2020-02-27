@@ -18,12 +18,12 @@
           {{ scope.row.title }}
         </template>
       </el-table-column>
-      <el-table-column label="大小" width="110" align="center">
+      <el-table-column class-name="status-col" label="状态" width="110" align="center">
         <template slot-scope="scope">
-          {{ scope.row.pageviews }}
+          <el-tag :type="scope.row.status | statusFilter">{{ scope.row.status }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column align="center" prop="created_at" label="上传时间" width="200">
+      <el-table-column align="center" prop="created_at" label="创建时间" width="200">
         <template slot-scope="scope">
           <i class="el-icon-time" />
           <span>{{ scope.row.display_time }}</span>

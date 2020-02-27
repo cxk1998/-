@@ -71,7 +71,7 @@ export const constantRoutes = [
       {
         path: 'modelTable',
         name: 'ModelTable',
-        component: () => import('@/views/tree/index'),
+        component: () => import('@/views/table/index'),
         meta: { title: '模型管理', icon: 'tree' }
       }
     ]
@@ -87,13 +87,13 @@ export const constantRoutes = [
       {
         path: 'modelTrain',
         name: 'ModelTrain',
-        component: () => import('@/views/table/index'),
+        component: () => import('@/views/form/index'),
         meta: { title: '模型训练', icon: 'train' }
       },
       {
         path: 'modelEval',
         name: 'ModelEval',
-        component: () => import('@/views/tree/index'),
+        component: () => import('@/views/form/index'),
         meta: { title: '模型推导', icon: 'eval' }
       }
     ]
@@ -109,13 +109,13 @@ export const constantRoutes = [
       {
         path: 'trainTask',
         name: 'TrainTask',
-        component: () => import('@/views/table/index'),
+        component: () => import('@/views/task/index'),
         meta: { title: '训练任务', icon: 'train' }
       },
       {
         path: 'evalTask',
         name: 'EvalTask',
-        component: () => import('@/views/tree/index'),
+        component: () => import('@/views/task/index'),
         meta: { title: '推导任务', icon: 'eval' }
       }
     ]
